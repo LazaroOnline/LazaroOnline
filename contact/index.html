@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Lazaro Online Pages</title>
+
+		<!-- CDN: (for prototyping) -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vuetify@2.0.15/dist/vuetify.min.js"></script>
+		<link  href="https://cdn.jsdelivr.net/npm/vuetify@2.0.15/dist/vuetify.min.css" rel="stylesheet" />
+		<link  href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet" />
+		<link  href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+
+		<!-- SELF HOSTED: Ensure library availability even if there is no internet access:
+		<script src="./libs/vue.min.js"></script>
+		<script src="./libs/vuetify.min.js"></script>
+		<link  href="./libs/vuetify.min.css"				rel="stylesheet"/>
+		<link  href="./libs/materialdesignicons.min.css"	rel="stylesheet"/>
+		-->
+	</head>
+	<body>
+		<div id="vue-root"></div>
+		<script type="text/x-template" id="vue-app-template">
+			<v-app>
+				Contact
+			</v-app>
+		</script>
+	</body>
+</html>
+
+<script>
+	var App = {
+		template: '#vue-app-template',
+		name: 'App',
+	}
+
+	var vuetify = new Vuetify()
+	var vueApp = new Vue({
+		vuetify,
+		render: h => h(App),
+	}).$mount('#vue-root')
+</script>
